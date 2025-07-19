@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+            color: #001414;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        /* Logo horizontal container for word mark */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            width: 180px;
+            height: auto;
+            filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+            animation: logoFadeIn 2s ease forwards;
+        }
+
+        .title {
+            font-size: 4rem;
+            font-weight: 700;
+            color: #F44336;
+            margin: 0;
+            letter-spacing: -1px;
+            animation: fadeInUp 1.5s ease forwards;
+            opacity: 0;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: #001414;
+            line-height: 1.6;
+            opacity: 0;
+            animation: fadeInUp 1.8s ease forwards;
+            max-width: 400px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .subscribe-section {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            animation: fadeInUp 2.1s ease forwards;
+            opacity: 0;
+            width: 100%;
+            max-width: 440px;
+        }
+
+        .email-form {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .email-input {
+            flex: 1;
+            padding: 15px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            color: #001414;
+            background-color: white;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .email-input:focus {
+            border-color: #F44336;
+            box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.1);
+        }
+
+        .email-input::placeholder {
+            color: #999;
+        }
+
+        .subscribe-btn {
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #F44336, #ff6a4d);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(244, 67, 54, 0.3);
+            min-width: 120px;
+        }
+
+        .subscribe-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(244, 67, 54, 0.4);
+            background: linear-gradient(135deg, #ff6a4d, #F44336);
+        }
+
+        .subscribe-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Animations */
+        @keyframes logoFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 3rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+                max-width: 100%;
+            }
+
+            .logo {
+                width: 140px;
+            }
+
+            .subscribe-section {
+                max-width: 100%;
+            }
+
+            .email-form {
+                flex-direction: column;
+            }
+
+            .subscribe-btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+                margin-bottom: 40px;
+            }
+
+            .container {
+                padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="logo.svg" alt="Logo" class="logo">
+        </div>
+
+        <h1 class="title">Coming Soon</h1>
+        <p class="subtitle">We're working on something awesome.</p>
+        <div class="subscribe-section">
+            <form class="email-form" action="#" method="post">
+                <input type="email" class="email-input" placeholder="Enter your email address" required>
+                <button type="submit" class="subscribe-btn">Notify Me</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
